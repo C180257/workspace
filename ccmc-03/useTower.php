@@ -1,4 +1,13 @@
-
+<?php
+require_once("class/Tower.php");
+?>
+<?php
+$skyTree = new Tower("東京スカイツリー",634,2012);
+//echo "<pre>";
+//var_dump($skyTree);
+//echo "</pre>";
+//exit(0);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -16,8 +25,8 @@
 		<dd>東京タワー の高さは 333 mで 1958 年に開業しました。</dd>
 	</dl>
 	<dl>
-		<dt>東京スカイツリー</dt>
-		<dd>東京スカイツリー の高さは 634 mで、2012 年に開業しました。</dd>
+		<dt><?= $skyTree->getName() ?></dt>
+		<dd><?= $skyTree->getProfile() ?></dd>
 	</dl>
 	<p><a href="index.html">インデックスに戻る</a></p>
 </body>
